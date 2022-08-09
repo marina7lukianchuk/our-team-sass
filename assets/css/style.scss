@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+}
+
+$sup-text-color: #898F8F;
+$text-color-lorem: #333333;
+$title-color: #666666;
+$gold-color: #FFCC00;
+
+@mixin text_style ($f-f, $f-s, $l-h, $f-w, $coloring) {
+  font-family: $f-f;
+  font-size: $f-s;
+  line-height: $l-h;
+  font-weight: $f-w;
+  color: $coloring;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.section1 {
+  width: 100%;
+  max-width: 1170px;
+  box-sizing: content-box;
+  display: block;
+  margin: 0 auto;
+  padding-top: 120px;
+  
+}
+
+
+.higher_block {
+  max-width: 450px;
+  margin: 0 auto;
+
+  p {
+    @include text_style('Raleway', 18px, 24px, 500, #898F8F);
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    @include text_style('Roboto', 60px, 58px, 900, $gold-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+}
+
+
+.vector {
+  position: relative;
+
+  &::before {
+    content: " ";
+    background-image: url(../img/Line.svg);
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 210px;
+    height: 1px;
+  }
+
+  &::after {
+    content: " ";
+    background-image: url(../img/Line.svg);
+    position: absolute;
+    top: 4px;
+    left: 234px;
+    width: 210px;
+    height: 1px;
+  }
+
+  .bonfire {
+    margin: 0 auto;
+    display: block;
+    width: 10px;
+
+  }
+}
+     ///***** PHOTO *******//////
+
+.section2 {
+  width: 100%;
+  max-width: 1030px;
+  box-sizing: border-box;
+  margin: 0 auto 120px;
+  padding: 115px 0 60px 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+     &::before {
+      content: " ";
+      height: 560px;
+      border-right: 1px solid $gold-color;
+      position: absolute;
+      top: 55px;
+      left: 50%;
+     }
+}
+
+.for_photo {
+  position: relative;
+
+  &::before {
+    content: " ";
+    width: 100px;
+    height: 100px;
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-color: $gold-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: " ";
+    width: 100px;
+    height: 100px;
+    border-width: 1px 1px 0 0px;
+    border-style: solid;
+    border-color: $gold-color;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .left_border {
+    width: 100px;
+    height: 100px;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: $gold-color;
+    position: absolute;
+    bottom: 36px;
+    left: 1;
+  }
+
+  .right_border {
+    width: 100px;
+    height: 100px;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: $gold-color;
+    position: absolute;
+    bottom: 36px;
+    right: -1px;
+  }
+
+  img {
+    max-width: 400px;
+    width: 100%;
+    justify-content: center;
+    padding: 15px
+  }
+}
+
+               ///***** TEXT *******//////
+.for_text {
+  max-width: 430px;
+  box-sizing: content-box;
+  padding-top: 10px;
+
+  h3 {
+    text-align: center;
+    @include text_style('Roboto', 36px, 34px, 900, $title-color);
+    margin-bottom: 30px;
+  }
+
+  .title_border {
+    width: 100px;
+    height: 2px;
+    border-top: 1px solid $gold-color;
+    margin: 0 auto 30px;
+  }
+
+  h4 {
+    text-align: center;
+    @include text_style('Raleway', 24px, 36px, 400, $title-color);
+    margin-bottom: 30px;
+  }
+
+  p {
+    text-align: center;
+    @include text_style('Raleway', 14px, 24px, 500, $text-color-lorem);
+    margin-bottom: 30px;
+  }
+}
+
+
+.social {
+  width: 100%;
+  max-width: 135px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  .social_icon {
+    width: 100%;
+    max-width: 30px;
+    fill: #CCCCCC;
+    stroke: #CCCCCC;
+
+    &:hover {
+      max-width: 35px;
+      color: $gold-color;
+      cursor: pointer;
+      fill: $gold-color;
+      stroke: $gold-color;
+      transition: 0.3s ease;
+    }
+  }
+}
+
+.decore_line {
+  width: 100%;
+  max-width: 20px;
+  border-top: 4px solid $gold-color;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  position: relative;
+    &::before {
+      content: " ";
+      border-top: 4px solid $gold-color;
+      width: 10px;
+      position: absolute;
+      bottom: 0;
+      right: 25px;
+    }
+    &::after {
+      content: " ";
+      border-top: 4px solid $gold-color;
+      width: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 25px;
+    }
+
+}
+
+.for_button {
+  width: 100%;
+  max-width: 130px;
+  margin: 0 auto;
+
+  .button {
+    width: 125px;
+    height: 24px;
+    background-color: white;
+    border: none;
+    outline: none;
+  }
+
+  .link_profile {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    @include text_style('Open Sans', 14px, 14px, 700, $title-color);
+    border: 1px solid $gold-color;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: goldenrod;
+      border: 3px solid $gold-color;
+      transition: 0.3s ease;
+    }
+  }
+}
