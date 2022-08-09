@@ -1,11 +1,15 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
+  display: block;
+  font-family: "Roboto";
   margin: 0 auto;
 }
+
 
 $sup-text-color: #898F8F;
 $text-color-lorem: #333333;
