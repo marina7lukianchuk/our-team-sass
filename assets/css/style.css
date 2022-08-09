@@ -129,7 +129,7 @@ body {
   border-style: solid;
   border-color: #FFCC00;
   position: absolute;
-  bottom: 36px;
+  bottom: 65px;
   left: 1;
 }
 .for_photo .right_border {
@@ -139,8 +139,8 @@ body {
   border-style: solid;
   border-color: #FFCC00;
   position: absolute;
-  bottom: 36px;
-  right: -1px;
+  bottom: 65px;
+  right: 1px;
 }
 .for_photo img {
   max-width: 400px;
